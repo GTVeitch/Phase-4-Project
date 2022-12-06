@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { Switch , Route } from "react-router-dom";
+import NavBar from "./components/NavBar"
+import HomePage from "./components/HomePage"
 
 function App() {
+
+  const [allCom, setAllComm] = useState([])
+  const [allProjects, setAllProjects] = useState([{}, {}, {}])
+
+
+
+  useEffect(() => {
+    fetch("/comments")
+    .then(r=>r.json())
+    // .then(res => {
+    //     setAllComm(res)
+    // })
+  }, [])
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar></NavBar>
+
+      <Switch>
+
+
+        <Route path="/">
+          <HomePage allProjects={allProjects}></HomePage>
+        </Route>
+
+      </Switch>
+    </>
   );
 }
 
