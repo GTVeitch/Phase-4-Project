@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  progress: MyString
+  challenge: MyString
+  bug: MyString
+  image: MyString
+
+two:
+  name: MyString
+  progress: MyString
+  challenge: MyString
+  bug: MyString
+  image: MyString
