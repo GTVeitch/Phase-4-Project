@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProjectCard ( {} ) {
+function ProjectCard ( { project } ) {
 
     return (
 
