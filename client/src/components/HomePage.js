@@ -14,10 +14,10 @@ function HomePage ( { allProjects } ) {
 
     shuffle(allProjects)
 
-    console.log(allProjects)
-
     const shownCards = allProjects.slice(0, 5).map((project) => {
-        return <ProjectCard project={project}/>
+        return (
+            <ProjectCard project={project} key={project.id}/>
+        )
     })
 
 

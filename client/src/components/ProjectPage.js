@@ -1,10 +1,14 @@
 import React from "react";
+import CommentForm from "./CommentForm"
 
 function ProjectPage ( { project , allCom } ) {
 
     return (
         <>
-        <div>project page { project.id } </div>
+
+            <h1>{project.name}</h1>
+            <img src={project.image} ></img>
+            <CommentForm project={project}></CommentForm>
         </>
     )
 }

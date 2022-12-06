@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
     before_action :set_user, only: [:show, :destroy]
+    before_action :authorize
+    skip_before_action :authorize, only: [:index, :show]
 
     def index
         render json: User.all
@@ -29,6 +31,10 @@ class UsersController < ApplicationController
             if User.exists?(params[:id])
                 @user = User.find(params[:id])
             end
+        end
+
+        def authorize
+            return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
         end
 
 end
