@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
-function ProjectCard ( {} ) {
+function ProjectCard ( { project } ) {
 
     return (
-
-        <div>yes</div>
-
+        <div>
+            <Link to={`/projects/${project.id}`}>yes</Link>
+        </div>
     )
 }
 
