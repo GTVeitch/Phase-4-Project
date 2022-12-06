@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
 
     before_action :set_project, only: [:show, :destroy]
+    before_action :authorize
+    skip_before_action :authorize, only: [:index, :show]
 
     def index
         render json: Project.all
@@ -12,6 +14,10 @@ class ProjectsController < ApplicationController
         else
             render json: {error: "Project not found"}, status: :not_found
         end
+    end
+
+    def update
+
     end
 
     def destroy
@@ -30,5 +36,9 @@ class ProjectsController < ApplicationController
             if Project.exists?(params[:id])
                 @project = Project.find(params[:id])
             end
+        end
+
+        def authorize
+            return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
         end
 end
