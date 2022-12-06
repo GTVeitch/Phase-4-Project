@@ -11,11 +11,11 @@ function App() {
 
 
   useEffect(() => {
-    fetch("/comments")
+    fetch("localhost:3000/projects")
     .then(r=>r.json())
-    // .then(res => {
-    //     setAllComm(res)
-    // })
+    .then(res => {
+        setAllProjects(res)
+    })
   }, [])
 
 
