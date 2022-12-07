@@ -5,7 +5,7 @@ function ProjectCard ( { project } ) {
 
     return (
         <div>
-            <Link to={`/projects/${project.id}`}>yes</Link>
+            <Link to={`/projects/${project.id}`}>{project.name?project.name:"No Name"}</Link>
         </div>
     )
 }

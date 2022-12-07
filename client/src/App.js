@@ -12,25 +12,25 @@ function App() {
 
 
   useEffect(() => {
-    fetch("/projects")
+    fetch("http://localhost:3000/projects")
     .then(r => r.json())
     .then(re => {
         console.log(re)
         setAllProjects(re)
     })
-    fetch("/comments")
-    .then(r => r.json())
-    .then(re => {
-      console.log(re)
-      setAllComm(re)
-    })
+    // fetch("/comments")
+    // .then(r => r.json())
+    // .then(re => {
+    //   console.log(re)
+    //   setAllComm(re)
+    // })
   }, [])
 
 
   const projectPages = allProjects.map((project) => {
     return (
-        <Route exact path={`/projects/${project.id}`} key={project.id}>
-          <ProjectPage project={project} allCom={allCom}></ProjectPage>
+        <Route exact path={`/projects/${project.id}`}  key={project.id}>
+          <ProjectPage project={project} allCom={allCom}  key={project.id}></ProjectPage>
         </Route>
     )
   })

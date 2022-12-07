@@ -8,13 +8,12 @@ require "csv"
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'Phase-4-Project-Day-1.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 
-
 csv.each do |row|
   t = Project.new
   t.date = row['Date']
   t.name = row['Name']
   t.progress = row['Progress']
-  t.challenge = row['Challenge'] 
+  t.challenge = row['Challenge']
   t.bug = row['Bug']
   t.image = row['Image']
   t.save

@@ -4,5 +4,6 @@ class Project < ApplicationRecord
     has_many :users, through: :comments
 
     validates :date, :progress, :challenge, :bug, :image, presence: true
+    validates :image, uniqueness: true
 
 end
