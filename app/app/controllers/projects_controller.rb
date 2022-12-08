@@ -1,8 +1,6 @@
 class ProjectsController < ApplicationController
 
     before_action :set_project, only: [:show, :destroy]
-    before_action :authorize
-    skip_before_action :authorize, only: [:index, :show]
 
     def index
         render json: Project.all
@@ -10,7 +8,7 @@ class ProjectsController < ApplicationController
 
     def show
         if @project.valid?
-            render json: @project, status: 200
+            render json: @project, status: 200 #serializer to include comments
         else
             render json: {error: "Project not found"}, status: :not_found
         end

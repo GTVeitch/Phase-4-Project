@@ -3,7 +3,8 @@ class CreateComments < ActiveRecord::Migration[7.0]
     create_table :comments do |t|
       t.string :content
       t.integer :likes
-
+      t.belongs_to :user
+      t.belongs_to :project
       t.timestamps
     end
   end

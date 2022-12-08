@@ -15,6 +15,10 @@ function CommentForm({ project, user }) {
             ...newComment,
             [e.target.name]: e.target.value,
         })
+            .then(r => r.json())
+            .then(res => {
+                project.comments.push(res)
+            })
     }
 
     function handleSubmit(e) {
