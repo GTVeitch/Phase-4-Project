@@ -1,0 +1,15 @@
+Date,Name,Progress,Challenge,Bug,Image
+12/5/2022,Music Searcher,the very beginning and setup with api,figuring out what i wanted to do my project on,none at the moment,https://i.imgur.com/li250Tt.png
+12/5/2022,Unsolicited Advice,"I created the project, its components, made a blueprint for the app, and wrote the README... I am moving at an ungodly slow pace, but lawd I am movin' (kinda).","Staying on track, simplifying, and refraining from establishing impossible goals.",Hard to have bugs in an empty app. I am the bug.,https://i.imgur.com/m7Q3wHr.png
+12/5/2022,Movie Tracker,Built out all of my React components and implemented basic functionality,Learning React Router on the fly; resisting urge to jump to CSS before building out basic functionality,Can't set a movie as a favorite yet,https://i.imgur.com/WuJM8IM.png
+12/5/2022,Weeb Trash,"Setting up components, establishing hierarchy, importing main API db",Getting React up and running tbh,None,https://i.imgur.com/myIkALN.png
+12/5/2022,Adopt Til' You Drop,Creating a blank JS file,Creating a blank JS file,Basic functionality,https://i.imgur.com/wqwweHP.png
+12/5/2022,Lord of the Rings Character Wiki,Successful API fetch and population of website data,fetching the data since it requires an auth key,data set is kind of sloppy,https://i.imgur.com/ysIxXT0.png
+12/5/2022,Ribbit,"created migrations, models, most controllers, all of the routes, tested with seeding data, started basework for react components",making sure the tables were formatted correctly,"none, killed it. ",https://i.imgur.com/V6FuCIV.png
+12/5/2022,Destination Picker,"Design, routing, seed data, and other various minor tweaks",I can't seem to get the right destination information to load when clicked.  Probably something really simple I'm missing,None right now besides the minor routing issue,https://i.imgur.com/XXrz8rg.png
+12/5/2022,Kick Stop ,I accomplished getting my react app and my database set up.,My biggest challenge was gathering the data for my database because it was very tedious. ,No known bugs at the moment.,https://i.imgur.com/XPkWyuV.png
+12/5/2022,Beany,Created database,make login work,login button,https://i.imgur.com/YgVywE8.png
+12/5/2022,Soccer League,Declaring tasks to work on,Get vite.js to work,Vite relative path and react-router-dom,https://i.imgur.com/6w3IVRj.jpg
+12/5/2022,PEAKED,finished db.json,figuring out how to move cards between pages,can't remove card from favorite list,https://i.imgur.com/9qbhQVm.png
+12/5/2022,Photo Web app,I got all the require functionality,Getting Lazy Load to cooperate,Lazy Load does not adjust height based on height of image,https://i.imgur.com/jjPuYyx.png
+12/6/2022,Movie Tracker,Fixed bugs and built out some CSS,Relearning a lot of CSS,None,https://i.imgur.com/B5AxhQx.png

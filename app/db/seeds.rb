@@ -1,7 +1,7 @@
 #Telling ruby that it will be using a CSV file
 require "csv"
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'Phase-4-Project-Day-1.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'Seed-Data.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 
 csv.each do |row|
