@@ -10,20 +10,19 @@ function App() {
   const [allProjects, setAllProjects] = useState([ {} , {} ])
 
 
+ console.log(document.cookie)
 
   useEffect(() => {
     fetch("http://localhost:3000/projects")
     .then(r => r.json())
     .then(re => {
-        console.log(re)
         setAllProjects(re)
     })
-    // fetch("/comments")
-    // .then(r => r.json())
-    // .then(re => {
-    //   console.log(re)
-    //   setAllComm(re)
-    // })
+    fetch("http://localhost:3000/comments")
+    .then(r => r.json())
+    .then(re => {
+      setAllComm(re)
+    })
   }, [])
 
 
