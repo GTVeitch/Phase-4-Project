@@ -8,7 +8,8 @@ class ProjectsController < ApplicationController
 
     def show
         if @project.valid?
-            render json: @project, status: 200 #serializer to include comments
+            render json: @project, serializer: ProjectWithCommentsSerializer
+            #serializer to include comments
         else
             render json: {error: "Project not found"}, status: :not_found
         end

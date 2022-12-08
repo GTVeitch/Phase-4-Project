@@ -21,7 +21,7 @@ function Navbar({ user, setUser }) {
 
             <Link to="/"> Home </Link>
 
-            {user ? <span onClick={logout}>Logout</span> : <Link to="/login">Login</Link>}
+            {user ? <span className="floatRight" onClick={logout}>Logout</span> : <Link className="floatRight" to="/login">Login</Link>}
 
         </>
     )

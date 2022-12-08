@@ -13,8 +13,6 @@ function App() {
   const [allUsers, setAllUsers] = useState([])
 
 
-  console.log(document.cookie)
-
   useEffect(() => {
     fetch("http://localhost:3000/projects")
       .then(r => r.json())
