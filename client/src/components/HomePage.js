@@ -22,6 +22,7 @@ function HomePage ( { allProjects } ) {
 
     return (
         <div className="homePage">
+            <div className="navbarSpacer"></div>
             {shownCards}
         </div>
     )

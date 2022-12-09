@@ -11,13 +11,75 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/*    */
-.cardImage {
-  height: 200px;
-  width: 200px;
-  float: right;
+/* ################################################### */
+/*Setting the size, color & layout of the navbar*/
+.navBar {
+  background: #00ABB3;
+  height: 70px;
+  text-align: center;
 }
+
+.title{
+  margin: 0;
+  width: 200px;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 700;
+  color: #B2B2B2;
+}
+
+.homeLink{
+  display: inline-block;
+}
+
+.loginLink{
+  display: inline-block;
+}
+/*This is setting a 20px gap between the navbar & first card. Can explain in person if need be*/
+.navbarSpacer{
+  height: 20px;
+}
+/* ################################################### */
+/*Color of homepage*/
+.homePage{
+  background: #B2B2B2;
+}
+/*Setting the size, color & layout of the cards*/
+.cards {
+  width: 80%;
+  margin: 0px auto 25px auto;
+  background: #3C4048;
+  border-radius: 45px;
+  height: 250px;
+  opacity: 100%;
+}
+/*Starting to work on the cards*/
+.cardImage {
+  height: 250px;
+  width: 245px;
+  float: right;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+
+
+
+
+/*moved everything on the product page to the center*/
+.projectPage {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*Image for the project page*/
 .mainImage {
@@ -25,35 +87,3 @@ code {
   max-height: 50%;
 }
 
-/*moved everything on the product page to the center*/
-.projectPage {
-  text-align: center;
-}
-
-/*Moved the login/logout button to the right side of the screen*/
-.floatRight {
-  float: right;
-  margin-right: 20px;
-}
-
-/*Setting the size, color & layout of the navbar*/
-.navBar {
-  background: #22A39F;
-  height: 70px;
-
-}
-
-/*Setting the size, color & layout of the cards*/
-.cards {
-  width: 80%;
-  margin: 10px auto 10px auto;
-  background: #434242;
-  border-radius: 45px;
-  height: 250px;
-  opacity: 80%;
-}
-
-/* */
-.homePage{
-  background: #F3EFE0;
-}

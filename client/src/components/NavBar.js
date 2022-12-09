@@ -19,9 +19,13 @@ function Navbar({ user, setUser }) {
     return (
         <div className="navBar">
 
-            <Link to="/"> Home </Link>
+            <Link className="homeLink" to="/">Home</Link>
 
-            {user ? <span className="floatRight" onClick={logout}>Logout</span> : <Link className="floatRight" to="/login">Login</Link>}
+            <h1 className="title">WNTD</h1>
+
+            {user ? 
+            <span className="loginLink" onClick={logout}>Logout</span> : 
+            <Link className="loginLink" to="/login">Login</Link>}
 
         </div>
     )

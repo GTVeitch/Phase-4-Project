@@ -4,7 +4,7 @@ import Login from "./Login";
 function LoginPage ( { setUser } ) {
 
     return (
-        <Login setUser={setUser}>Login</Login>
+        <Login className="loginPage" setUser={setUser}>Login</Login>
     )
 
 }
