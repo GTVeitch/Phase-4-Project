@@ -1,12 +1,12 @@
 import React from "react";
 import Login from "./Login";
 
-function LoginPage ( { setUser } ) {
+function LoginPage ( { setUser , user } ) {
 
     return (
         <div className="loginBackground">
-            
-            <Login className="loginPage" setUser={setUser}>Login</Login>
+
+            <Login className="loginPage" setUser={setUser} user={user}>Login</Login>
         </div>
     )
 

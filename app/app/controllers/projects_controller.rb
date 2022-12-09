@@ -15,9 +15,6 @@ class ProjectsController < ApplicationController
         end
     end
 
-    def update
-
-    end
 
     def destroy
         if @project.valid?

@@ -29,7 +29,7 @@ User.create(username: "Soccer League", password: "Soccer League", display_name: 
 User.create(username: "PEAKED", password: "PEAKED", display_name: "PEAKED")
 
 User.all.map do |user|
-  Comment.create(user_id: user[:id], content: "First", likes: 0, project_id: Project.all.sample[:id])
+  Comment.create(user_id: user[:id], username: user[:username], content: "First", likes: 0, project_id: Project.all.sample[:id])
 end
 
 

@@ -9,7 +9,7 @@ import LoginPage from './components/LoginPage';
 function App() {
 
   const [allProjects, setAllProjects] = useState([{}, {}])
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   const [allUsers, setAllUsers] = useState([])
 
 
@@ -55,7 +55,7 @@ function App() {
       <Switch>
 
         <Route exact path="/login">
-          <LoginPage setUser={setUser}></LoginPage>
+          <LoginPage setUser={setUser} user={user}></LoginPage>
         </Route>
 
         {projectPages}

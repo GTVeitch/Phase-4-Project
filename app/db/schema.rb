@@ -14,6 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_192749) do
   create_table "comments", force: :cascade do |t|
     t.string "content"
     t.integer "likes"
+    t.string "username"
     t.integer "user_id"
     t.integer "project_id"
     t.datetime "created_at", null: false
