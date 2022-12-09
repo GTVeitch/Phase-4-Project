@@ -30,6 +30,12 @@ function ProjectPage({ project, user }) {
             <img className="projectImage" src={project.image} alt=""></img>
             <br></br>
             {user ? <CommentForm project={project} user={user}></CommentForm> : null}
+            <p><strong>Progress Update- </strong>{project.progress}</p>
+            <p><strong>Challenges- </strong>{project.challenge}</p>
+            <p><strong>Known Bugs- </strong>{project.bug}</p>
+
+
+            <p><strong>-Comments-</strong></p>
             {projectComments}
             <div className="footerSpacer"></div>
         </div>

@@ -59,16 +59,24 @@ html {
   float: right;
   border-radius: 40px;
   object-fit: cover;
-  transition: 0.4s ease;
+  /* transition: 0.4s ease; */
 }
 
-.cardImage img:hover {
-  transform: scale(1.5);
+.cardImage img:hover{
+  transform:scale(1.3);
+  transition:1s ease-in ;
 }
 /*This is here so there is no white bar at the bottom of the page from the card btm-margin*/
 .footerSpacer {
-  height: 25px;
+  height: 20px;
 }
+
+.cardTitle{
+  font-size: 210%;
+  color: #00ABB3;
+  margin-left: 40px;
+}
+
 
 /*##############ProjectPage###################*/
 /*moved everything on the product page to the center*/
@@ -83,8 +91,8 @@ html {
 
 /*Image for the project page*/
 .projectImage {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 60%;
+  max-height: 60%;
 }
 
 .loginForm{
