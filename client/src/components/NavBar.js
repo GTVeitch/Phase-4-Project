@@ -17,13 +17,13 @@ function Navbar({ user, setUser }) {
 
 
     return (
-        <>
+        <div className="navBar">
 
             <Link to="/"> Home </Link>
 
             {user ? <span className="floatRight" onClick={logout}>Logout</span> : <Link className="floatRight" to="/login">Login</Link>}
 
-        </>
+        </div>
     )
 }
 

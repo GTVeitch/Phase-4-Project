@@ -11,7 +11,7 @@ function ProjectPage({ project, user }) {
             .then(res => setFiller(res))
 
     }, [])
-    console.log(project);
+    // console.log(project);
 
     const projectComments = filler.comments.map((comment) => {
         return (

@@ -16,15 +16,14 @@ function HomePage ( { allProjects } ) {
 
     const shownCards = allProjects.slice(0, 5).map((project) => {
         return (
-            <ProjectCard project={project} key={project.id}/>
+            <ProjectCard  project={project} key={project.id}/>
         )
     })
 
-
     return (
-        <>
+        <div className="homePage">
             {shownCards}
-        </>
+        </div>
     )
 }
 
