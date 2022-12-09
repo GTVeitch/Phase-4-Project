@@ -18,12 +18,13 @@ function Login({ setUser }) {
     }
 
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="loginForm">
+        {/* <h2>"Type your project name just as you did for our form, include the spaces:)"</h2> */}
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-        />
+          placeholder="Enter Username..."/>
         <button type="submit">Login</button>
       </form>
     );

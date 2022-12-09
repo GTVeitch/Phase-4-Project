@@ -14,7 +14,7 @@ function HomePage ( { allProjects } ) {
 
     shuffle(allProjects)
 
-    const shownCards = allProjects.slice(0, 5).map((project) => {
+    const shownCards = allProjects.slice(0, 15).map((project) => {
         return (
             <ProjectCard  project={project} key={project.id}/>
         )
@@ -24,6 +24,7 @@ function HomePage ( { allProjects } ) {
         <div className="homePage">
             <div className="navbarSpacer"></div>
             {shownCards}
+            <div className="footerSpacer"></div>
         </div>
     )
 }

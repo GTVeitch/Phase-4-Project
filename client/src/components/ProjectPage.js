@@ -25,11 +25,13 @@ function ProjectPage({ project, user }) {
 
     return (
         <div className="projectPage">
-            <h1>{project.name}</h1>
-            <img className="mainImage" src={project.image} alt=""></img>
+              <div className="navbarSpacer"></div>
+            <h1 className="projectTitle">{project.name}</h1>
+            <img className="projectImage" src={project.image} alt=""></img>
             <br></br>
             {user ? <CommentForm project={project} user={user}></CommentForm> : null}
             {projectComments}
+            <div className="footerSpacer"></div>
         </div>
     )
 }

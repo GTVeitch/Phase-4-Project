@@ -6,12 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*Setting the background color of the whole website*/
+html {
+  background-color: #B2B2B2;
+  height: 100%;
 }
-/* ################################################### */
+/* ###################NAVBAR########################### */
 /*Setting the size, color & layout of the navbar*/
 .navBar {
   background: #00ABB3;
@@ -19,7 +19,7 @@ code {
   text-align: center;
 }
 
-.title{
+.title {
   margin: 0;
   width: 200px;
   display: inline-block;
@@ -28,22 +28,20 @@ code {
   color: #B2B2B2;
 }
 
-.homeLink{
+.homeLink {
   display: inline-block;
 }
 
-.loginLink{
+.loginLink {
   display: inline-block;
 }
+
 /*This is setting a 20px gap between the navbar & first card. Can explain in person if need be*/
-.navbarSpacer{
+.navbarSpacer {
   height: 20px;
 }
-/* ################################################### */
-/*Color of homepage*/
-.homePage{
-  background: #B2B2B2;
-}
+
+/* #################HomePage######################### */
 /*Setting the size, color & layout of the cards*/
 .cards {
   width: 80%;
@@ -53,37 +51,42 @@ code {
   height: 250px;
   opacity: 100%;
 }
-/*Starting to work on the cards*/
+
+/*Adjusting the card image*/
 .cardImage {
   height: 250px;
   width: 245px;
   float: right;
   border-radius: 40px;
   object-fit: cover;
+  transition: 0.4s ease;
 }
 
+.cardImage img:hover {
+  transform: scale(1.5);
+}
+/*This is here so there is no white bar at the bottom of the page from the card btm-margin*/
+.footerSpacer {
+  height: 25px;
+}
 
-
-
-
+/*##############ProjectPage###################*/
 /*moved everything on the product page to the center*/
 .projectPage {
   text-align: center;
+  background-color: #B2B2B2;
 }
 
-
-
-
-
-
-
-
-
-
+.projectTitle {
+  margin-top: 0px;
+}
 
 /*Image for the project page*/
-.mainImage {
+.projectImage {
   max-width: 50%;
   max-height: 50%;
 }
 
+.loginForm{
+  margin-left: 42%;
+}
