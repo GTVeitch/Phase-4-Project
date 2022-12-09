@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CommentForm from "./CommentForm"
+import ProjectComments from "./ProjectComments"
 
 function ProjectPage({ project, user }) {
 
@@ -11,14 +12,13 @@ function ProjectPage({ project, user }) {
             .then(res => setFiller(res))
 
     }, [])
-    // console.log(project);
+
+
+
 
     const projectComments = filler.comments.map((comment) => {
         return (
-            <div>{comment.user}
-                <div>{comment.content}</div>
-                {comment.votes}
-            </div>
+            <ProjectComments comment={comment} user={user} key={comment.id}></ProjectComments>
         )
     })
 
@@ -28,14 +28,11 @@ function ProjectPage({ project, user }) {
               <div className="navbarSpacer"></div>
             <h1 className="projectTitle">{project.name}</h1>
             <img className="projectImage" src={project.image} alt=""></img>
-            <br></br>
-            {user ? <CommentForm project={project} user={user}></CommentForm> : null}
             <p><strong>Progress Update- </strong>{project.progress}</p>
             <p><strong>Challenges- </strong>{project.challenge}</p>
             <p><strong>Known Bugs- </strong>{project.bug}</p>
-
-
-            <p><strong>-Comments-</strong></p>
+            <br></br>
+            {user ? <CommentForm project={project} user={user} filler={filler} setFiller={setFiller}></CommentForm> : null}
             {projectComments}
             <div className="footerSpacer"></div>
         </div>

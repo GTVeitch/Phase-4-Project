@@ -6,7 +6,7 @@ function CommentForm({ project, user }) {
         username: user.username,
         user_id: user.id,
         content: null,
-        votes: 0,
+        likes: 0,
         project_id: project.id,
     })
 
@@ -15,10 +15,7 @@ function CommentForm({ project, user }) {
             ...newComment,
             [e.target.name]: e.target.value,
         })
-            .then(r => r.json())
-            .then(res => {
-                project.comments.push(res)
-            })
+
     }
 
     function handleSubmit(e) {
@@ -30,6 +27,11 @@ function CommentForm({ project, user }) {
             },
             body: JSON.stringify(newComment)
         })
+        .then(r => r.json())
+        .then(res => {
+          console.log(res)
+        })
+
     }
 
 
